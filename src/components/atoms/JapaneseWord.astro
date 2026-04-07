@@ -1,0 +1,24 @@
+---
+interface Props {
+  characters: { char: string; furigana?: string }[];
+}
+
+const { characters } = Astro.props;
+---
+
+<ruby>
+  {
+    characters.map(({ char, furigana }) => (
+      <>
+        {char}
+        {furigana && (
+          <>
+            <rp>(</rp>
+            <rt>{furigana}</rt>
+            <rp>)</rp>
+          </>
+        )}
+      </>
+    ))
+  }
+</ruby>

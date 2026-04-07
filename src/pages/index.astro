@@ -1,17 +1,57 @@
 ---
-
+import JapaneseWord from '../components/atoms/JapaneseWord.astro';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <div class="card-container">
+      <h2>大</h2>
+      <!-- <img
+          src="https://media.istockphoto.com/id/157510230/photo/confident-businessman-giant-towering-over-city-skyline.webp?s=2048x2048&w=is&k=20&c=5R-n1XQafsNQ4rpfRMJfN2pIa4mdz-kT_aKW_JIZnAM="
+          alt=""
+        /> -->
+      <p>Gros, large</p>
+      <!--Pronontionnations -->
+      <dl>
+        <dt>Kun</dt>
+        <dd>おお-</dd>
+        <dd>おおきい</dd>
+        <dd>おおいに</dd>
+        <dt>On</dt>
+        <dd>ダイ</dd>
+        <dd>タイ</dd>
+      </dl>
+      <h3>Exemples de mots</h3>
+      <dl>
+        <dt>Université</dt>
+        <dd>
+          <JapaneseWord
+            characters={[
+              { char: '大', furigana: 'だい' },
+              { char: '学', furigana: 'がく' },
+            ]}
+          />
+        </dd>
+      </dl>
+    </div>
+  </body>
 </html>
+
+<style lang="scss">
+  h2 {
+    margin: 0;
+  }
+  .card-container {
+    border: 12px solid blue;
+    background-color: red;
+    border-radius: 10px;
+  }
+</style>
