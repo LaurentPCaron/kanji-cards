@@ -13,18 +13,25 @@ import JapaneseWord from '../components/atoms/JapaneseWord.astro';
   </head>
   <body>
     <div class="card-container">
-      <h2>大</h2>
-      <!-- <img
+      <div class="titles">
+        <p>Gros, large</p>
+        <p>大</p>
+      </div>
+      <div class="rectangle">
+        <img
           src="https://media.istockphoto.com/id/157510230/photo/confident-businessman-giant-towering-over-city-skyline.webp?s=2048x2048&w=is&k=20&c=5R-n1XQafsNQ4rpfRMJfN2pIa4mdz-kT_aKW_JIZnAM="
           alt=""
-        /> -->
-      <p>Gros, large</p>
+        />
+      </div>
+
       <!--Pronontionnations -->
-      <dl>
+      <dl class="kunyomi">
         <dt>Kun</dt>
         <dd>おお-</dd>
         <dd>おおきい</dd>
         <dd>おおいに</dd>
+      </dl>
+      <dl>
         <dt>On</dt>
         <dd>ダイ</dd>
         <dd>タイ</dd>
@@ -50,8 +57,57 @@ import JapaneseWord from '../components/atoms/JapaneseWord.astro';
     margin: 0;
   }
   .card-container {
-    border: 12px solid blue;
+    --card-width: 630px;
+    aspect-ratio: 5 / 7;
+    width: var(--card-width);
+    border: calc(var(--card-width) * 0.048) solid #f0c000;
+    border-bottom-width: calc(var(--card-width) * 0.06349);
     background-color: red;
-    border-radius: 10px;
+    border-radius: calc(var(--card-width) * 0.048);
+    box-sizing: border-box;
+
+    & dl {
+      display: flex;
+      margin-inline: 2%;
+    }
+
+    & .titles {
+      display: flex;
+      justify-content: space-between;
+      width: calc(var(--card-width) * 0.79365);
+      margin-inline: auto;
+    }
+
+    & img {
+      display: block;
+      aspect-ratio: 25 / 18;
+      width: 96%;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    & .rectangle {
+      display: grid;
+      place-content: center;
+      background: conic-gradient(
+        from 33deg,
+        #ffcc00,
+        #b99400,
+        #ffcc00,
+        #b99400,
+        #ffcc00
+      );
+      width: calc(var(--card-width) * 0.79365);
+      aspect-ratio: 25 / 18;
+      margin-inline: auto;
+
+      box-shadow: 7px 7px 25px 2px #000;
+    }
+
+    & .kunyomi {
+      border-bottom: 2px solid #000;
+      padding-top: 10%;
+      padding-bottom: 2%;
+    }
   }
 </style>
