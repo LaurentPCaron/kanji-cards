@@ -1,0 +1,90 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: user/repo
+
+media_folder: /public/media
+public_folder: /media
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: src/content/posts
+    format: yml
+    fields:
+      - label: Français
+        name: title
+        widget: string
+
+      - label: Background
+        name: Background
+        widget: list
+        max: 1
+        types:
+          - label: Image Item
+            name: image_image
+            fields:
+              - label: Image
+                name: image
+                widget: image
+
+          - label: Color Item
+            name: color_item
+            fields:
+              - label: Couleur
+                name: color
+                allowInput: true
+                widget: color
+
+      - label: Kanji
+        name: kanji
+        widget: object
+        fields:
+          - label: Kanji
+            name: Kanji
+            widget: string
+          - label: Couleur
+            name: color
+            allowInput: true
+            widget: color
+
+      - label: Image
+        name: image
+        widget: image
+
+      - label: Kunyomis
+        name: kunyomis
+        widget: list
+        field:
+          - label: Kunyomi
+            name: kunyomi
+            widget: string
+
+      - label: Onyomis
+        name: onyomis
+        widget: list
+        field:
+          - label: Onyomi
+            name: onyomi
+            widget: string
+
+      - label: Vocablaire
+        name: vocabulary
+        widget: list
+        fields:
+          - label: Français
+            name: french
+            wideget: string
+          - label: Japonais
+            name: japanese
+            widget: list
+            fields:
+              - label: Kanji
+                name: kanji
+                widget: string
+              - label: Furigana
+                name: furigana
+                requiered: false
+                widget: string

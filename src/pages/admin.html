@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Sveltia CMS</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+    <script>
+        CMS.registerEditorComponent({
+            id: 'file-link',
+            label: 'File Link',
+            icon: 'attach_file',
+            fields: [
+                { name: 'file', label: 'File' },
+                { name: 'text', label: 'Text to Display' },
+            ],
+            pattern: /<a href="([^"]+?)">([^\n]+?)<\/a>/,
+            fromBlock: (match) => ({
+                file: decodeURI(match[1]),
+                text: match[2],
+            }),
+            toBlock: (data) => `<a href="${data.file}">${data.text}</a>`,
+            toPreview: (data) => `<a href="${data.file}">${data.text}</a>`,
+        });
+    </script>
+</body>
+
+</html>

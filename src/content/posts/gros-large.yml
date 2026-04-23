@@ -1,0 +1,22 @@
+title: Gros, large
+Background:
+  - type: color_item
+    color: '#ababab'
+kanji:
+  Kanji: 大
+  color: '#f00000'
+image: https://archives.bulbagarden.net/media/upload/thumb/5/56/Sleep_Key_Art.jpg/1024px-Sleep_Key_Art.jpg
+kunyomis:
+  - おお-
+  - おおきい
+  - おおいに
+onyomis:
+  - ダイ
+  - タイ
+vocabulary:
+  - french: Université
+    japanese:
+      - kanji: 大
+        furigana: だい
+      - kanji: 学
+        furigana: がく

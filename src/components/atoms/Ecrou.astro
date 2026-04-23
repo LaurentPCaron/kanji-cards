@@ -1,0 +1,25 @@
+<span aria-hidden></span>
+
+<style lang="scss">
+  span {
+    display: grid;
+    place-items: center;
+    width: 7%;
+    --o: calc(50% * tan(-22.5deg));
+    clip-path: polygon(
+      var(--o) 50%,
+      50% var(--o),
+      calc(100% - var(--o)) 50%,
+      50% calc(100% - var(--o))
+    );
+    aspect-ratio: 1 / 1;
+    background: radial-gradient(circle at 35% 25%, #ffffff 5%, #474747 50%);
+    &:after {
+      content: '';
+      width: 75%;
+      height: 10%;
+      rotate: -45deg;
+      background-color: gray;
+    }
+  }
+</style>

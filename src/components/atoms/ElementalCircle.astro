@@ -1,0 +1,24 @@
+---
+interface Props {
+  color: string;
+}
+
+const { color } = Astro.props;
+---
+
+<span class="element-sphere"><slot /></span>
+
+<style define:vars={{ color }}>
+  .element-sphere {
+    display: grid;
+    place-content: center;
+    background: radial-gradient(
+      circle at left top,
+      #ffffff 20%,
+      var(--color) 50%
+    );
+    aspect-ratio: 1 / 1;
+    height: 1.5em;
+    border-radius: 999px;
+  }
+</style>
