@@ -1,7 +1,7 @@
 title: Gros, large
 background:
   - type: image_item
-    image: /img/grunge-wall-texture.jpg
+    image: img/grunge-wall-texture.jpg
 kanji:
   kanji: 大
   color: '#f00000'
