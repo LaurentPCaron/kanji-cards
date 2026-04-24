@@ -4,14 +4,14 @@ backend:
   name: github
   repo: user/repo
 
-media_folder: /public/media
-public_folder: /media
+media_folder: /public/img
+public_folder: /img
 
 collections:
-  - name: posts
-    label: Posts
-    label_singular: Post
-    folder: src/content/posts
+  - name: kanjis
+    label: Kanjis
+    label_singular: Kanji
+    folder: src/content/kanjis
     format: yml
     fields:
       - label: Français
@@ -19,12 +19,12 @@ collections:
         widget: string
 
       - label: Background
-        name: Background
+        name: background
         widget: list
         max: 1
         types:
           - label: Image Item
-            name: image_image
+            name: image_item
             fields:
               - label: Image
                 name: image
@@ -43,7 +43,7 @@ collections:
         widget: object
         fields:
           - label: Kanji
-            name: Kanji
+            name: kanji
             widget: string
           - label: Couleur
             name: color
@@ -53,6 +53,10 @@ collections:
       - label: Image
         name: image
         widget: image
+      - lable: ImageAlt
+        name: ImageAlt
+        required: false
+        wideget: string
 
       - label: Kunyomis
         name: kunyomis

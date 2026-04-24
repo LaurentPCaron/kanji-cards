@@ -1,0 +1,28 @@
+title: Gouvernement
+background:
+  - type: image_item
+    image: https://duffield-timber.transforms.svdcdn.com/production/content/wood-grain-patterns-types-textures-terminology/American-White-Ash.jpeg?w=800&q=82&fm=webp&fit=clip&dm=1762474829&s=6ce1529dc1ff346e257936db86afc45a
+kanji:
+  kanji: 政
+  color: '#dbc900'
+image: /img/P5-NagatachoNight.webp
+ImageAlt: Bâtiment de la Diète nationale de Tokyo tiré Persona 5
+kunyomis:
+  - まつりごと
+  - まん
+onyomis:
+  - セイ
+  - ショウ
+vocabulary:
+  - french: Gouvernement; administration
+    japanese:
+      - kanji: 政
+        furigana: せい
+      - kanji: 府
+        furigana: ふ
+  - french: Système Postal
+    japanese:
+      - kanji: 郵
+        furigana: ゆう
+      - kanji: 政
+        furigana: せい

@@ -1,11 +1,12 @@
 title: Gros, large
-Background:
-  - type: color_item
-    color: '#ababab'
+background:
+  - type: image_item
+    image: /img/grunge-wall-texture.jpg
 kanji:
-  Kanji: 大
+  kanji: 大
   color: '#f00000'
 image: https://archives.bulbagarden.net/media/upload/thumb/5/56/Sleep_Key_Art.jpg/1024px-Sleep_Key_Art.jpg
+ImageAlt: ''
 kunyomis:
   - おお-
   - おおきい
