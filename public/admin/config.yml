@@ -4,7 +4,7 @@ backend:
   name: github
   repo: LaurentPCaron/kanji-cards
 
-media_folder: /public/img
+media_folder: public/img
 public_folder: img
 
 collections:
@@ -52,6 +52,8 @@ collections:
 
       - label: Image
         name: image
+        media_folder: /public/img
+        public_folder: img
         widget: image
       - lable: ImageAlt
         name: ImageAlt
