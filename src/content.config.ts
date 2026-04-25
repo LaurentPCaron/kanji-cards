@@ -7,6 +7,11 @@ import { glob, file } from 'astro/loaders';
 // 3. Import Zod
 import { z } from 'astro/zod';
 
+function fixImagePath(path: string) {
+  if (!path) return path;
+  return path.startsWith('/') ? path.slice(1) : path;
+}
+
 const kanjisCollection = defineCollection({
   loader: glob({ base: './src/content/kanjis', pattern: '**/*.yml' }),
   schema: z.object({
@@ -27,7 +32,7 @@ const kanjisCollection = defineCollection({
       kanji: z.string(),
       color: z.string(),
     }),
-    image: z.string(),
+    image: z.string().transform(fixImagePath),
     imageAlt: z.string().optional(),
     kunyomis: z.array(z.string()),
     onyomis: z.array(z.string()),

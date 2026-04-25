@@ -5,8 +5,8 @@ background:
 kanji:
   kanji: 政
   color: '#dbc900'
-image: ./img/P5-NagatachoNight.webp
-imageAlt: ''
+image: /img/P5-NagatachoNight.webp
+imageAlt: 'Bâtiment de la Diète nationale de Tokyo tiré Persona 5'
 kunyomis:
   - まつりごと
   - まん
@@ -26,4 +26,3 @@ vocabulary:
         furigana: ゆう
       - kanji: 政
         furigana: せい
-ImageAlt: Bâtiment de la Diète nationale de Tokyo tiré Persona 5

@@ -1,11 +1,11 @@
 title: Tenir, Avoir
 background:
   - type: image_item
-    image: ./img/grunge-wall-texture.jpg
+    image: /img/grunge-wall-texture.jpg
 kanji:
   kanji: 持
   color: '#1a5fb4'
-image: ./img/to-hold.jpg
+image: /img/to-hold.jpg
 imageAlt: Link from Zelda Twilight Princess holding a cat and smiling
 kunyomis:
   - もつ
