@@ -4,8 +4,8 @@ backend:
   name: github
   repo: LaurentPCaron/kanji-cards
 
-media_folder: public/img
-public_folder: img
+media_folder: public/.
+public_folder: '.'
 
 collections:
   - name: kanjis
@@ -53,12 +53,12 @@ collections:
       - label: Image
         name: image
         media_folder: /public/img
-        public_folder: img
+        public_folder: /img
         widget: image
-      - lable: ImageAlt
-        name: ImageAlt
+      - label: ImageAlt
+        name: imageAlt
         required: false
-        wideget: string
+        widget: string
 
       - label: Kunyomis
         name: kunyomis
@@ -82,7 +82,7 @@ collections:
         fields:
           - label: Français
             name: french
-            wideget: string
+            widget: string
           - label: Japonais
             name: japanese
             widget: list
