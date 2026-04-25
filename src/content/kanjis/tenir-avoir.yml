@@ -1,0 +1,28 @@
+title: Tenir, Avoir
+background:
+  - type: image_item
+    image: img/grunge-wall-texture.jpg
+kanji:
+  kanji: 持
+  color: '#1a5fb4'
+image: img/to-hold.jpg
+imageAlt: Link from Zelda Twilight Princess holding a cat and smiling
+kunyomis:
+  - もつ
+onyomis:
+  - ジ
+vocabulary:
+  - french: Possession
+    japanese:
+      - kanji: 所
+        furigana: しょ
+      - kanji: 持
+        furigana: じ
+  - french: Sentiment, attitude
+    japanese:
+      - kanji: 気
+        furigana: き
+      - kanji: 持
+        furigana: も
+      - kanji: ち
+        furigana: a
