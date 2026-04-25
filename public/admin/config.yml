@@ -94,5 +94,5 @@ collections:
                 widget: string
               - label: Furigana
                 name: furigana
-                requiered: false
+                required: false
                 widget: string
