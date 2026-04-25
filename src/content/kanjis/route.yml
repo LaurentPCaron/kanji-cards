@@ -1,0 +1,27 @@
+title: Route
+background:
+  - type: image_item
+    image: /img/grunge-wall-texture.jpg
+kanji:
+  kanji: 道
+  color: '#fb3c3c'
+image: /img/road.webp
+imageAlt: Rainbow Road venant de Mario Kart 64
+kunyomis:
+  - みち
+onyomis:
+  - ドウ
+  - トウ
+vocabulary:
+  - french: Route, autoroute
+    japanese:
+      - kanji: 道
+        furigana: どう
+      - kanji: 路
+        furigana: ろ
+  - french: Shinto
+    japanese:
+      - kanji: 神
+        furigana: しん
+      - kanji: 道
+        furigana: とう
