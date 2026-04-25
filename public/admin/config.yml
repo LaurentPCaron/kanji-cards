@@ -28,8 +28,8 @@ collections:
             fields:
               - label: Image
                 name: image
-                media_folder: img
-                public_folder: img/
+                media_folder: /public/img/
+                public_folder: ./img
                 widget: image
 
           - label: Color Item
@@ -54,8 +54,8 @@ collections:
 
       - label: Image
         name: image
-        media_folder: img
-        public_folder: img/
+        media_folder: /public/img/
+        public_folder: ./img
         widget: image
       - label: ImageAlt
         name: imageAlt
