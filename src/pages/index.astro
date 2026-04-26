@@ -1,66 +1,21 @@
 ---
-import CardKanji from '@components/organisms/CardKanji.astro';
 import { getCollection } from 'astro:content';
 
-const kanjisCollection = await getCollection('kanjisCollection');
+import Layout from '@components/4-layouts/Layout.astro';
 
-const {
-  background,
-  image,
-  imageAlt,
-  kanji,
-  kunyomis,
-  onyomis,
-  title,
-  vocabulary,
-} = kanjisCollection[0].data;
+const kanjisCollection = await getCollection('kanjisCollection');
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <div class="card-list">
-      {
-        kanjisCollection.map(
-          ({
-            data: {
-              background,
-              image,
-              imageAlt,
-              kanji,
-              kunyomis,
-              onyomis,
-              title,
-              vocabulary,
-            },
-          }) => (
-            <CardKanji
-              background={background}
-              image={image}
-              imageAlt={imageAlt}
-              kanji={kanji}
-              kunyomis={kunyomis}
-              onyomis={onyomis}
-              title={title}
-              vocabulary={vocabulary}
-            />
-          ),
-        )
-      }
-    </div>
-  </body>
-</html>
-<style>
-  .card-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-</style>
+<Layout>
+  <ul class="card-list">
+    {
+      kanjisCollection.map(({ data, id }) => {
+        return (
+          <li>
+            <a href={`/card/${id}`}>{data.title}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Layout>

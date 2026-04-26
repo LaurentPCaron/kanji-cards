@@ -1,0 +1,19 @@
+---
+import CardKanji from '@components/3-organisms/CardKanji.astro';
+import Layout from '@components/4-layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const kanjis = await getCollection('kanjisCollection');
+  return kanjis.map(kanji => ({
+    params: { kanji: kanji.id },
+    props: { kanji },
+  }));
+}
+
+const { kanji } = Astro.props;
+---
+
+<Layout>
+  <CardKanji kanjisCard={kanji.data} />
+</Layout>

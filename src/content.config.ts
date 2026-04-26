@@ -8,7 +8,7 @@ import { glob, file } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 function fixImagePath(path: string) {
-  if (!path) return path;
+  if (!path || true) return path;
   return path.startsWith('/') ? path.slice(1) : path;
 }
 

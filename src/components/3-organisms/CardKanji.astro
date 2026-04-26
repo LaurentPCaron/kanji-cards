@@ -1,38 +1,24 @@
 ---
-import Ecrou from '@components/atoms/Ecrou.astro';
-import ElementalCircle from '@components/atoms/ElementalCircle.astro';
-import JapaneseWord from '@components/atoms/JapaneseWord.astro';
+import Ecrou from '@components/1-atoms/Ecrou.astro';
+import ElementalCircle from '@components/1-atoms/ElementalCircle.astro';
+import JapaneseWord from '@components/1-atoms/JapaneseWord.astro';
+import type iKanjiCard from '@interfaces/iKanjiCard';
 
 interface Props {
-  title: string;
-  background: (
-    | {
-        image: string;
-      }
-    | {
-        color: string;
-      }
-  )[];
-  kanji: { kanji: string; color: string };
-  image: string;
-  imageAlt?: string;
-  kunyomis: string[];
-  onyomis: string[];
-  vocabulary: {
-    french: string;
-    japanese: { kanji: string; furigana?: string }[];
-  }[];
+  kanjisCard: iKanjiCard;
 }
 
 const {
-  title,
-  kanji,
-  background,
-  image,
-  imageAlt,
-  kunyomis,
-  onyomis,
-  vocabulary,
+  kanjisCard: {
+    title,
+    kanji,
+    background,
+    image,
+    imageAlt,
+    kunyomis,
+    onyomis,
+    vocabulary,
+  },
 } = Astro.props;
 
 const getBackground = () => {
@@ -41,6 +27,8 @@ const getBackground = () => {
   if ('image' in background[0])
     return `background-image: url(${background[0].image})`;
 };
+
+console.log(kanji);
 ---
 
 <div class="card-container" style={getBackground()}>
