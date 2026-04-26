@@ -1,0 +1,30 @@
+title: Dehors
+background:
+  - type: image_item
+    image: /img/grunge-wall-texture.jpg
+kanji:
+  kanji: 外
+  color: '#62a0ea'
+image: /img/outside.jpg
+imageAlt: Main qui touche du gazon. Aka "touching grass"
+kunyomis:
+  - そと
+  - ほか (autre)
+  - はずす(Retirer ou tromper)
+  - はずれる(Enlver ou rater)
+onyomis:
+  - ガイ
+  - ゲ
+vocabulary:
+  - french: Pays étranger
+    japanese:
+      - kanji: 外
+        furigana: がい
+      - kanji: 国
+        furigana: こく
+  - french: Désinstallé
+    japanese:
+      - kanji: 外
+        furigana: はず
+      - kanji: す
+        furigana: ''
