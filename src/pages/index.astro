@@ -12,7 +12,7 @@ const kanjisCollection = await getCollection('kanjisCollection');
       kanjisCollection.map(({ data, id }) => {
         return (
           <li>
-            <a href={`card/${id}`}>{data.title}</a>
+            <a href={`${import.meta.env.BASE_URL}${id}`}>{data.title}</a>
           </li>
         );
       })

@@ -8,8 +8,8 @@ import { glob, file } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 function fixImagePath(path: string) {
-  if (!path || true) return path;
-  return path.startsWith('/') ? path.slice(1) : path;
+  if (!path) return path;
+  return path.startsWith('/') ? `${import.meta.env.BASE_URL}${path}` : path;
 }
 
 const kanjisCollection = defineCollection({
@@ -20,7 +20,7 @@ const kanjisCollection = defineCollection({
       .array(
         z.union([
           z.object({
-            image: z.string(),
+            image: z.string().transform(fixImagePath),
           }),
           z.object({
             color: z.string(),
