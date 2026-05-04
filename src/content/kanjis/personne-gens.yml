@@ -1,0 +1,20 @@
+title: Personne, gens
+background:
+  - type: color_item
+    color: '#9a9996'
+kanji:
+  kanji: 民
+  color: '#1a5fb4'
+image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOs_7UThcuy11QGnvM6vC4b1k9dUuob1zBRIBIuu45AHxR-95WEK9nhTYqKMaHFMkP9vHpUeeSQ_WvL1rX5idEr8NB8pV4s0a7qSlJwzZ2OH7iUen4G7nBVCaJXN6Z4Uw9CrCswRbWLe0/s550/group_young_people.png
+imageAlt: Plusieur personnes
+kunyomis:
+  - たみ
+onyomis:
+  - ミン
+vocabulary:
+  - french: Citoyen
+    japanese:
+      - kanji: 市
+        furigana: し
+      - kanji: 民
+        furigana: min
