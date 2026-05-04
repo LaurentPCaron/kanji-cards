@@ -18,3 +18,9 @@ vocabulary:
         furigana: し
       - kanji: 民
         furigana: みん
+  - french: Nationnalité
+    japanese:
+      - kanji: 国
+        furigana: こく
+      - kanji: 民
+        furigana: みん
